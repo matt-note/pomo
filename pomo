@@ -10,6 +10,7 @@ else
   echo "${1}分作業します"
   sleep $1m
 fi
-date
 mpv --no-video ~/pomo-sound/se.mp4
 mpv --no-video ~/pomo-sound/end.mp3
+wait
+date

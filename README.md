@@ -20,7 +20,7 @@ $ cd pomo
 $ cp -r pomo-sound $HOME
 ```
 
-4. pomo スクリプトをパスに移動
+4. pomo スクリプトをPATHに移動
 ```bash
 $ chmod +x pomo
 $ sudo cp pomo /usr/local/bin

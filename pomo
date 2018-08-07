@@ -1,6 +1,7 @@
 #!/bin/bash
   
 mpv --no-video ~/pomo-sound/start.mp3
+wait
 if [[ $1 = "" ]]; then
   date
   echo "15分作業します"
@@ -11,6 +12,7 @@ else
   sleep $1m
 fi
 mpv --no-video ~/pomo-sound/se.mp4
+wait
 mpv --no-video ~/pomo-sound/end.mp3
 wait
 date

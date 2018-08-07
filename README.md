@@ -1,7 +1,8 @@
 ## Ubuntu 用? ポモドーロタイマー
 * 効果音： [効果音ラボ](https://soundeffect-lab.info/)
-* ポモドーロテクニック: [link](http://d.hatena.ne.jp/keyword/%A5%DD%A5%E2%A5%C9%A1%BC%A5%ED%A5%C6%A5%AF%A5%CB%A5%C3%A5%AF)
-* pomo では、休憩用の効果音は無い。
+* ポモドーロテクニックとは: [link](http://d.hatena.ne.jp/keyword/%A5%DD%A5%E2%A5%C9%A1%BC%A5%ED%A5%C6%A5%AF%A5%CB%A5%C3%A5%AF)
+* pomo では、休憩用の効果音は無い。  
+
 
 1. 音声再生用に mpv のインストール
 ```bash

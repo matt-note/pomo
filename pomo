@@ -1,16 +1,42 @@
 #!/bin/bash
   
+# 参考:
+# - https://stackoverflow.com/questions/26628392/incrementing-current-date-by-5-minutes-in-bash
+# - https://stackoverflow.com/questions/1194882/how-to-generate-random-number-in-bash
+# - http://wiki.bash-hackers.org/syntax/ccmd/case
+  
 mpv --no-video ~/pomo-sound/start.mp3
 echo ""; echo ""
-date
+echo "now: $(date "+%Y-%m-%d %H:%M:%S")"
 
 if [[ $1 = "" ]]; then
+  echo "to:  $(date "+%Y-%m-%d %H:%M:%S" -d "15 minutes")"
+  echo ""
   echo "15分作業します"
-  sleep 15m 
+  sleep 15m
 else
+  echo "to:  $(date "+%Y-%m-%d %H:%M:%S" -d "$1 minutes")"
+  echo ""
   echo "${1}分作業します"
   sleep $1m
 fi
 
-mpv --no-video ~/pomo-sound/se.mp4 ~/pomo-sound/end.mp3
-date
+mpv --no-video ~/pomo-sound/se.mp4
+wait
+
+case $((RANDOM % 10)) in
+  0) mpv --no-video ~/pomo-sound/end.mp3;;
+  1) mpv --no-video ~/pomo-sound/excellent.mp3;;
+  2) mpv --no-video ~/pomo-sound/marvelous.mp3;;
+  3) mpv --no-video ~/pomo-sound/ganbattane.mp3;;
+  4) mpv --no-video ~/pomo-sound/timeup.mp3;;
+  5) mpv --no-video ~/pomo-sound/syuuryoushimashita.mp3;;
+  6) mpv --no-video ~/pomo-sound/yattane.mp3;;
+  7) mpv --no-video ~/pomo-sound/stop.mp3;;
+  8) mpv --no-video ~/pomo-sound/otsukaresamadesu.mp3;;
+  9) mpv --no-video ~/pomo-sound/omedetoulevelupdayo.mp3;;
+esac
+
+echo ""; echo ""; echo ""
+echo "now: $(date "+%Y-%m-%d %H:%M:%S")"
+echo ""; echo ""

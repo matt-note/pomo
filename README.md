@@ -1,8 +1,8 @@
 ## Ubuntu 用? ポモドーロタイマー
-* 効果音： [効果音ラボ](https://soundeffect-lab.info/)
+* 時間になったら音が鳴るだけのポモドーロタイマー。
+* 終了時の効果音は9種類。情報源: [効果音ラボ](https://soundeffect-lab.info/)
 * サンプル音: [サンプル](https://raw.githubusercontent.com/matt-note/pomo/master/pomo-sound/start.mp3?raw=true)
 * ポモドーロテクニックとは: [link](http://d.hatena.ne.jp/keyword/%A5%DD%A5%E2%A5%C9%A1%BC%A5%ED%A5%C6%A5%AF%A5%CB%A5%C3%A5%AF)
-* pomo では、休憩用の機能は無い。時間になったら音が鳴るだけ。
 
 ### Usage
 1. 音声再生用に mpv のインストール
@@ -21,7 +21,7 @@ $ cd pomo
 $ cp -r pomo-sound $HOME
 ```
 
-4. pomo スクリプトをPATHに移動
+4. pomo スクリプトを /usr/local/bin にコピー
 ```bash
 $ chmod +x pomo
 $ sudo cp pomo /usr/local/bin
@@ -36,7 +36,7 @@ $ whereis pomo
 $ pomo
 ```
 
-6. pomo に引数を与えて実行
+6. 作業時間を指定する場合
 ```bash
 # 25分後に終了の合図が鳴る
 $ pomo 25

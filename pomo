@@ -7,15 +7,15 @@
   
 mpv --no-video ~/pomo-sound/start.mp3
 echo ""; echo ""
-echo "now: $(date "+%Y-%m-%d %H:%M:%S")"
+echo "start: $(date "+%Y-%m-%d %H:%M:%S")"
 
 if [[ $1 = "" ]]; then
-  echo "to:  $(date "+%Y-%m-%d %H:%M:%S" -d "15 minutes")"
+  echo "to   : $(date "+%Y-%m-%d %H:%M:%S" -d "15 minutes")"
   echo ""
   echo "15分作業します"
   sleep 15m
 else
-  echo "to:  $(date "+%Y-%m-%d %H:%M:%S" -d "$1 minutes")"
+  echo "to  : $(date "+%Y-%m-%d %H:%M:%S" -d "$1 minutes")"
   echo ""
   echo "${1}分作業します"
   sleep $1m

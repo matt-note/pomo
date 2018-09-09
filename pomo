@@ -4,8 +4,14 @@
 # - https://stackoverflow.com/questions/26628392/incrementing-current-date-by-5-minutes-in-bash
 # - https://stackoverflow.com/questions/1194882/how-to-generate-random-number-in-bash
 # - http://wiki.bash-hackers.org/syntax/ccmd/case
-  
-mpv --no-video ~/pomo-sound/start.mp3
+
+case $(( (RANDOM % 10) % 4 )) in
+  0) mpv --no-video ~/pomo-sound/start.mp3;;
+  1) mpv --no-video ~/pomo-sound/start2.mp3;;
+  2) mpv --no-video ~/pomo-sound/hazimemasu.mp3;;
+  3) mpv --no-video ~/pomo-sound/kaishishimasu.mp3;;
+esac
+
 echo ""; echo ""
 echo "start: $(date "+%Y-%m-%d %H:%M:%S")"
 

@@ -1,4 +1,4 @@
-## Ubuntu 用? ポモドーロタイマー
+## ポモドーロタイマー for bash
 * 時間になったら音が鳴るだけのポモドーロタイマー。
 * 終了時の効果音は9種類。情報源: [効果音ラボ](https://soundeffect-lab.info/)
 * サンプル音: [サンプル](https://raw.githubusercontent.com/matt-note/pomo/master/pomo-sound/start.mp3?raw=true)
@@ -43,6 +43,9 @@ $ pomo 25
 
 # 効果音の確認用
 $ pomo 0
+
+# ラーメンタイマーにも使える
+$ pomo 3
 ```
 
 ### 補足事項
